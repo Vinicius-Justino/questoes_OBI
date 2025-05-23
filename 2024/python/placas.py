@@ -1,27 +1,27 @@
-def verifica_placa(placa, mascara):
-    if len(placa) != len(mascara):
+def encaixa_padrao(placa, padrao):
+    if len(placa) != len(padrao):
         return False
     
-    tipos = "LNH"
-    caracteres = [
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-        "0123456789",
-        "-"
-    ]
+    caracteres_validos = {
+        "L" : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "D" : "0123456789",
+        "-" : "-"
+    }
 
-    for i in range(len(mascara)):
-        tipo = mascara[i]
+    for i in range(len(placa)):
         caractere = placa[i]
+        placeholder = padrao[i]
 
-        if not caractere in caracteres[tipos.index(tipo)]:
+        if not caractere in caracteres_validos[placeholder]:
             return False
     
     return True
 
+
 entrada = input()
-if verifica_placa(entrada, "LLLHNNNN"):
+if encaixa_padrao(entrada, "LLL-DDDD"):
     print(1)
-elif verifica_placa(entrada, "LLLNLNN"):
+elif encaixa_padrao(entrada, "LLLDLDD"):
     print(2)
 else:
     print(0)
