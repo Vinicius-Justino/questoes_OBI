@@ -16,7 +16,7 @@ int main(void) {
     int quantidade_cidades, tamanho_lista;
     scanf("%d %d", &quantidade_cidades, &tamanho_lista);
 
-    estrada obra[tamanho_lista];
+    estrada obra[quantidade_cidades - 1];
     int quantidade_estradas = 0;
     for (int linha = 0; linha < tamanho_lista; linha++) {
         int tarefa;
