@@ -1,21 +1,18 @@
-coordenadas_valor_apagado = [0, 0]
-menor_soma = 0
-maior_soma = 0
+coordenadas_incognita = [0, 0]
+soma_verdadeira = 0
+soma_defazada = 0
+
 for i in range(int(input())):
     linha = [int(n) for n in input().split(" ")]
 
     if 0 in linha:
-        coordenadas_valor_apagado = [i + 1, linha.index(0) + 1]
-    
-    soma_linha = sum(linha)
-    if i == 0:
-        menor_soma = soma_linha
-        maior_soma = soma_linha
-    elif soma_linha < menor_soma:
-        menor_soma = soma_linha
-    elif soma_linha > maior_soma:
-        maior_soma = soma_linha
+        soma_defazada = sum(linha)
+        coordenadas_incognita = [i + 1, linha.index(0) + 1]
+    else:
+        soma_verdadeira = sum(linha)
 
-valor_apagado = maior_soma - menor_soma
+valor_incognita = soma_verdadeira - soma_defazada
 
-print(f"{valor_apagado}\n{coordenadas_valor_apagado[0]}\n{coordenadas_valor_apagado[1]}")
+print(valor_incognita)
+print(coordenadas_incognita[0])
+print(coordenadas_incognita[1])
