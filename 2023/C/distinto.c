@@ -5,7 +5,7 @@ int main(void) {
     scanf("%d", &tamanho_sequencia);
 
     int sequencia[tamanho_sequencia];
-    int inicio_intervalo = 0, final_intervalo = 0, maior_intervalo = 0;
+    int inicio_intervalo = 0, final_intervalo = -1, maior_intervalo = 0;
     for (int i = 0; i < tamanho_sequencia; i++) {
         int numero;
         scanf("%d", &numero);
