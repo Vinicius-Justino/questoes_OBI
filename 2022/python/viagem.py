@@ -35,6 +35,7 @@ def encontra_melhor_caminho():
         return
     if ilha_atual == destino:
         menor_tempo = min(menor_tempo, tempo_total) if menor_tempo != -1 else tempo_total
+        return
 
     for navio in navios[ilha_atual]:
         if navio[0] in caminho:
