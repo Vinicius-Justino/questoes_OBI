@@ -40,4 +40,3 @@ while True:
     cont_troca_permanente -= 1
 
 print(sum([mesa[i] for i in lugares_ocupados]))
-print(lugares_ocupados)
